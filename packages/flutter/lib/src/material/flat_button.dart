@@ -11,32 +11,25 @@ import 'material_button.dart';
 import 'theme.dart';
 import 'theme_data.dart';
 
-/// A material design "flat button".
+/// A material design text (flat) button.
+///
+/// For more information on text button styles, go to the material.io
+/// [guidance page](https://material.io/components/buttons/).
+///
+/// ## When to use
 ///
 /// A flat button is a text label displayed on a (zero elevation) [Material]
-/// widget that reacts to touches by filling with color.
+/// widget that reacts to touches by filling with color. The test button style
+/// has a transparent background with text in colorPrimary. Text buttons are
+/// used for low-priority actions, especially when presenting multiple options.
 ///
-/// Use flat buttons on toolbars, in dialogs, or inline with other content but
-/// offset from that content with padding so that the button's presence is
-/// obvious. Flat buttons intentionally do not have visible borders and must
-/// therefore rely on their position relative to other content for context. In
-/// dialogs and cards, they should be grouped together in one of the bottom
-/// corners. Avoid using flat buttons where they would blend in with other
-/// content, for example in the middle of lists.
-///
-/// Material design flat buttons have an all-caps label, some internal padding,
-/// and some defined dimensions. To have a part of your application be
-/// interactive, with ink splashes, without also committing to these stylistic
-/// choices, consider using [InkWell] instead.
+/// ## Using text buttons
 ///
 /// If the [onPressed] callback is null, then the button will be disabled,
 /// will not react to touch, and will be colored as specified by
 /// the [disabledColor] property instead of the [color] property. If you are
 /// trying to change the button's [color] and it is not having any effect, check
 /// that you are passing a non-null [onPressed] handler.
-///
-/// Flat buttons have a minimum size of 88.0 by 36.0 which can be overridden
-/// with [ButtonTheme].
 ///
 /// The [clipBehavior] argument must not be null.
 ///
@@ -95,6 +88,7 @@ import 'theme_data.dart';
 ///  * [InkWell], which implements the ink splash part of a flat button.
 ///  * [RawMaterialButton], the widget this widget is based on.
 ///  * <https://material.io/design/components/buttons.html>
+/// ## API
 class FlatButton extends MaterialButton {
   /// Create a simple text button.
   ///
@@ -207,7 +201,7 @@ class FlatButton extends MaterialButton {
   }
 }
 
-/// The type of of FlatButtons created with [FlatButton.icon].
+/// The type of FlatButtons created with [FlatButton.icon].
 ///
 /// This class only exists to give FlatButtons created with [FlatButton.icon]
 /// a distinct class for the sake of [ButtonTheme]. It can not be instantiated.
